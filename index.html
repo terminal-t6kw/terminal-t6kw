@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Number Display</title>
+    <!-- All styling is contained locally within this single style block. -->
+    <style>
+        /* General variables to define the color scheme */
+        :root {
+            --primary-color: #1d4ed8; /* Deep Blue */
+            --secondary-color: #3b82f6; /* Lighter Blue */
+            --background-color: #f3f4f6; /* Light Gray */
+            --card-color: #ffffff; /* White */
+        }
+        
+        /* Center content vertically and horizontally on the screen */
+        body {
+            font-family: sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the central container (the 'card') */
+        .number-card {
+            background-color: var(--card-color);
+            padding: 3rem;
+            border-radius: 1.5rem; /* Rounded corners */
+            /* Mimicking a subtle shadow */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); 
+            border-bottom: 4px solid var(--secondary-color);
+            text-align: center;
+        }
+
+        /* Styling for the large numbers */
+        .numbers {
+            font-size: 6rem; /* Large default size */
+            font-weight: 900; /* Extra bold */
+            color: var(--primary-color);
+            letter-spacing: -0.05em; /* Tighter spacing */
+            line-height: 1;
+            /* Allows easy selection of the text */
+            user-select: all; 
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px) {
+            .number-card {
+                padding: 2rem;
+            }
+            .numbers {
+                font-size: 4rem; /* Smaller text on narrow screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for the numbers -->
+    <div class="number-card">
+        <!-- The requested text -->
+        <p class="numbers">
+            123123
+        </p>
+    </div>
+</body>
+</html>
